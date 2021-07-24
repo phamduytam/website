@@ -1,0 +1,58 @@
+<div class="product-list product-list_normal side-indent product-list_horizontal"
+    data-visibility-observer='{"selector": ".product", "preset": "productAnalytics"}'>
+    <article class="product" *ngFor="let item of product">
+        <a href="javascript:void(0)" class="product-image-wrapper">
+            <img class="product-image"
+                src="{{ item.image }}"
+                alt="{{ item.title }}">
+        </a>
+        <div class="product-details">
+            <div class="product-name">
+                <!-- <span class="product-name-icon _ls" [attr.data-bg]="item.icon"></span> -->
+                <span class="product-name-links">
+                    <a href="javascript:void(0)"
+                        class="product-name-link" title="{{ item.title }}">
+                        <h3 class="product-name-title">{{ item.title }}</h3>
+                    </a>
+                    <span class="product-name-vendor">
+                        by <span class="product-name-vendor-text">{{ item.author }}</span>
+                    </span>
+                </span>
+            </div>
+
+            <div class="product-description" [innerHTML]="item.description"></div>
+
+            <div class="rating product-rating">
+                <span class="{{ item.rating }}"></span>
+            </div>
+
+            <span class="product-monster-one" title="{{ item.title }}">
+                <svg class="product-info-membership">
+                    <use xlink:href="assets/images/sprite-svg-5b7564d6fbcf842e63665f617180c099.svg#one">
+                    </use>
+                </svg>
+            </span>
+
+            <div class="product-sales" *ngIf="item.sales_amount !== ''">
+                <span class="product-sales_amount">
+                    {{ item.sales_amount }}</span> Sales
+            </div>
+
+            <div class="product-price-wrapper">
+                <div class="product-price">
+                    {{ item.price }} </div>
+            </div>
+
+            <div class="product-links">
+                <a href="javascript:void(0)"
+                    class="product-link product-link_details btn btn_3">
+                    Details </a>
+                <a href="{{ item.link_demo }}"
+                    class="product-link product-link_demo btn btn_2" rel="noopener noreferrer nofollow" target="_blank">
+                    Live Demo </a>
+            </div>
+        </div>
+    </article>
+</div>
+
+<div class="btn-load-more" *ngIf="isLoadMore"><a href="javascript:void(0)" (click)="loadMore()" class="product-link product-link_demo btn btn_2">Load More</a></div>

@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "e0e6fbd5-153a-4382-b099-beeab3424640"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -31,9 +34,19 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/css/catalog.scss",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/catalog.js",
+              "src/assets/js/108-4fa88d555738b10f5a69.js",
+              "src/assets/js/267-8898deeef081cf4836c2.js",
+              "src/assets/js/315-4181e9dc94ce9648ed67.js",
+              "src/assets/js/712-3cb65c433801440d6a0e.js",
+              "src/assets/js/830-df9da42278c8b2187fdf.js",
+              "src/assets/js/853-f967200919abf3584775.js",
+              "src/assets/js/product-e559156faec34525edb5.js"
+            ]
           },
           "configurations": {
             "production": {
